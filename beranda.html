@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPM STIKes KHAS KEMPEK</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <a href="beranda.html"><h1>Dewan Perwakilan Mahasiswa</h1></a>
+            <ul>
+                <li><a href="beranda.html">Beranda</a></li>   
+                <li>
+                    <a href="tentangkami.html">Tentang Kami <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="visi-misi.html">Visi & Misi</a></li>
+                        <li><a href="structure.html">Struktur</a></li>
+                        <li><a href="tugas-fungsi.html">Tugas & Fungsi</a></li>
+                    </ul>
+                </li>
+                <li><a href="berita.html">Berita</a></li>
+                <li><a href="kotak Aspirasi.html">Kotak aspirasi</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    <section class="hero">
+        <div class="hero-badge badge-left">
+            <a href="https://www.stikeskhas.ac.id/"><img src="img/download logo stikes.png" alt="Logo STIKES"></a>
+        </div>
+
+        <div class="hero-badge badge-right">
+            <a href="beranda.html"><img src="img/download logo dpm.png" alt="Logo DPM"></a>
+        </div>
+        <div class="hero-bg-slider">
+            <div class="slide" style="background-image: url('img/banerberanda/baner\ beranda.jpeg');"></div>
+            <div class="slide" style="background-image: url('img/banerberanda/');"></div>
+            <div class="slide" style="background-image: url('img/banerberanda/berita\ sidang\ umum.jpeg');"></div>
+        </div>
+       <div class="hero-content">
+    <span style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; color: var(--accent-color); font-weight: 700;"></span>
+    <h2>Selamat Datang di DPM STIKES KHAS</h2>
+    
+    <p style="font-size: 1.4rem; font-style: italic; border-left: 4px solid var(--accent-color); padding-left: 15px; display: inline-block;">
+        "Membangun Organisasi Yang Tertib Administrasi Dan Berintegritas"
+    </p>
+    
+    <div style="margin-top: 30px;">
+        <a href="tentangkami.html" class="btn btn-primary">Tentang Kami</a>
+        <a href="kotak Aspirasi.html" class="btn btn-secondary" style="background: transparent; border: 2px solid white;">Suara Mahasiswa</a>
+    </div>
+</div>
+    </section>
+
+    <script>
+        // SCRIPT BARU UNTUK BACKGROUND SLIDER
+        const slides = document.querySelectorAll('.hero-bg-slider .slide');
+        let currentSlide = 0;
+        
+        // Fungsi untuk menampilkan slide berikutnya
+        function nextSlide() {
+            // Sembunyikan slide saat ini
+            slides[currentSlide].classList.remove('active');
+            
+            // Pindah ke slide berikutnya
+            currentSlide = (currentSlide + 1) % slides.length;
+            
+            // Tampilkan slide berikutnya
+            slides[currentSlide].classList.add('active');
+        }
+
+        // Set slide pertama sebagai aktif
+        slides[0].classList.add('active');
+
+        // Atur interval pergantian slide setiap 5 detik (5000ms)
+        setInterval(nextSlide, 5000);
+    </script>
+
+ <section class="latest-news-section">
+    <div class="container">
+        <div class="news-header-line">
+            <h2>Berita Terbaru</h2>
+            <div class="header-arrow">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+
+        <div class="news-fade-slider" id="news-slider">
+           <a href="sidang umum.html"><div class="news-slide active">
+                <div class="news-card-horizontal">
+                    <div class="news-image-wrapper">
+                        <img src="img/Bannerberita terbaru/berita sidang umum.jpeg" alt="Workshop PPKS">
+                    </div>
+                    <div class="news-text-content">
+                        <div class="category-tag">BERITA</div>
+                        <h3 class="news-title">
+                           Sidang Umum DPM Stikes Khas Kempek Membangun Organisasi Yang Tertib Adninistrasi Dan Berinegritas
+                        </h3>
+                        <div class="news-meta">
+                            <span class="admin-name">DPM STIkes KHAS</span> | 
+                            <span class="news-date">19/10/2025</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            </div>
+
+            <div class="news-slide">
+                <a href="pembuatan wibsite.html"><div class="news-card-horizontal">
+                    <div class="news-image-wrapper">
+                        <img src="img/Bannerberita terbaru/bener pembuatan wibsite.jpeg" alt="Berita Lain">
+                    </div>
+                    <div class="news-text-content">
+                        <div class="category-tag">BERITA</div>
+                        <h3 class="news-title">
+                            Pembuatan wibsite DPM STIKes KHAS KEMPEK Menuju Transparansi Organisasi yang Informatif dan Akuntabe
+                        </h3>
+                        <div class="news-meta">
+                            <span class="admin-name">ADMIN STIKES KHAS</span> | 
+                            <span class="news-date">17/11/2024 </span>
+                        </div>
+                    </div>
+                </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<script>
+    // Script untuk Slider Berita Otomatis
+    const newsSlides = document.querySelectorAll('#news-slider .news-slide');
+    let currentNewsSlide = 0;
+
+    function autoNextNews() {
+        // Hilangkan kelas active dari slide saat ini
+        newsSlides[currentNewsSlide].classList.remove('active');
+        
+        // Hitung index slide berikutnya
+        currentNewsSlide = (currentNewsSlide + 1) % newsSlides.length;
+        
+        // Tambahkan kelas active ke slide baru
+        newsSlides[currentNewsSlide].classList.add('active');
+    }
+
+    // Ganti berita setiap 5 detik, sama seperti slider Hero
+    setInterval(autoNextNews, 5000);
+</script>
+
+    <footer>
+        <div class="container footer-container">
+            
+            <div class="footer-col">
+                <h4>DPM STIKes Khas Kempek</h4>
+                <p>Membangun Organisasi Yang Tertib Adninistrasi Dan Berinegritas</p>
+                <div class="social-links" style="margin-top: 15px;">
+                    <a href="https://www.instagram.com/dpmstikeskhas/#" style="display: inline-block; margin-right: 10px; color: white;"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@dpmstikeskhas" style="display: inline-block; margin-right: 10px; color: white;"><i class="fa-brands fa-tiktok"></i></a>
+
+                </div>
+            </div>
+
+        
+
+            <div class="footer-col">
+                <h4>Navigasi Cepat</h4>
+                <a href="beranda.html">Beranda</a>
+                <a href="tentangkami.html">Tentang Kami</a>
+                <a href="structure.html">Struktur</a>
+                <a href="berita.html">Berita</a>
+                <a href="kotak Aspirasi.html">Kotak Aspirasi</a>
+            </div>
+
+            <div class="footer-col" id="contact">
+                <h4>Hubungi Kami</h4>
+                <p><i class="fas fa-envelope"></i> dpmstikeskhas25@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +62 838 1893 5831</p>
+                <p><i class="fas fa-map-marker-alt"></i> STIKes Khas Kempek, Cirebon</p>
+            </div>
+            
+        </div>
+        <div class="footer-bottom">
+            &copy;2025 - Dewan Perwakilan Mahasiswa STIKes Khas Kempek. All Rights Reserved.
+        </div>
+    </footer>
+    
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
